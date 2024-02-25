@@ -1,0 +1,14 @@
+D:\Assignment\Arkenea\DAL\bin\Debug\net6.0\DAL.deps.json
+D:\Assignment\Arkenea\DAL\bin\Debug\net6.0\DAL.runtimeconfig.json
+D:\Assignment\Arkenea\DAL\bin\Debug\net6.0\DAL.dll
+D:\Assignment\Arkenea\DAL\bin\Debug\net6.0\DAL.pdb
+D:\Assignment\Arkenea\DAL\obj\Debug\net6.0\DAL.csproj.AssemblyReference.cache
+D:\Assignment\Arkenea\DAL\obj\Debug\net6.0\DAL.GeneratedMSBuildEditorConfig.editorconfig
+D:\Assignment\Arkenea\DAL\obj\Debug\net6.0\DAL.AssemblyInfoInputs.cache
+D:\Assignment\Arkenea\DAL\obj\Debug\net6.0\DAL.AssemblyInfo.cs
+D:\Assignment\Arkenea\DAL\obj\Debug\net6.0\DAL.csproj.CoreCompileInputs.cache
+D:\Assignment\Arkenea\DAL\obj\Debug\net6.0\DAL.dll
+D:\Assignment\Arkenea\DAL\obj\Debug\net6.0\refint\DAL.dll
+D:\Assignment\Arkenea\DAL\obj\Debug\net6.0\DAL.pdb
+D:\Assignment\Arkenea\DAL\obj\Debug\net6.0\DAL.genruntimeconfig.cache
+D:\Assignment\Arkenea\DAL\obj\Debug\net6.0\ref\DAL.dll

@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+            input[type="button"] {
+                background-color: #4caf50;
+                color: #fff;
+                cursor: pointer;
+            }
+
+                input[type="button"]:hover {
+                    background-color: #45a049;
+                }
+    </style>
+</head>
+<body>
+
+    <h2>Signup</h2>
+
+    <form id="signupForm">
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <input type="button" value="Submit" onclick="submitForm()">
+    </form>
+
+    <script>
+        function submitForm() {
+            // Get form data
+            var formData = {
+                FirstName: $('#firstName').val(),
+                LastName: $('#lastName').val(),
+                Email: $('#email').val(),
+                Password: $('#password').val()
+            };
+
+            // AJAX call
+            $.ajax({
+                type: 'POST',
+                url: '/Account/SignUp', // Replace with your actual endpoint
+                data: formData,
+                success: function (response) {
+                    // Handle success response
+                    alert("Signup Successfull");
+                    console.log('Success:', response.Message);
+                    window.location.href = '/Account/SignIn';
+                },
+                error: function (error) {
+                    // Handle error response
+                    console.log('Error:', error);
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>
