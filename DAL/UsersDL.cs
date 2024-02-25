@@ -13,7 +13,7 @@ namespace DAL
     public class UsersDL
     {
         private readonly ApplicationDbContext _context;
-        string connectionString = "Server=192.168.176.44\\SQLEXPRESS2019;Database=Arkenea;User Id=development;Password=D3v3lp@76%$6;MultipleActiveResultSets=True;"; //Configuration.GetConnectionString("DefaultConnection");
+        string connectionString = "test;Database=Arkenea;User Id=development;Password=D3v3lp@76%$6;MultipleActiveResultSets=True;"; //Configuration.GetConnectionString("DefaultConnection");
 
 
         public UsersDL()
