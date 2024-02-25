@@ -19,40 +19,80 @@ namespace BAL
         {
             try
             {
-                var imageFileName = $"{Guid.NewGuid()}_profile.jpg";
-                var imagePathOnDisk = Path.Combine("wwwroot", "ProfileImages", imageFileName);
+                var fileName = "";
+                if (userProfile.File != null)
+                {
 
+                    fileName = $"{Guid.NewGuid()}_profile{Path.GetExtension(userProfile.FileName)}";
 
-                File.WriteAllBytes(imagePathOnDisk, userProfile.Image);
+                    var uniqueFolder = userProfile.FirstName + "_" + userProfile.LastName;
+                    var uniqueUserFolder = Path.Combine("wwwroot", "ProfileFiles", uniqueFolder);
 
-                userProfile.ProfilePicturePath = $"/ProfileImages/{imageFileName}";
+                    // Check if the user's folder exists, and create it if not
+                    if (!Directory.Exists(uniqueUserFolder))
+                    {
+                        Directory.CreateDirectory(uniqueUserFolder);
+                    }
 
-                var result = _usersDL.SaveUserProfile(userProfile);
+                    var filePathOnDisk = Path.Combine(uniqueUserFolder, fileName);
 
-                return result;
+                    File.WriteAllBytes(filePathOnDisk, userProfile.File);
+
+                    userProfile.ProfilePicturePath = $"/ProfileFiles/{uniqueFolder}/{fileName}";
+
+                    var result = _usersDL.SaveUserProfile(userProfile);
+
+                    return result;
+                }
+                else
+                {
+
+                    throw new ArgumentNullException("userProfile.File", "No file provided for update.");
+                }
             }
             catch (Exception ex)
             {
-
                 Console.WriteLine($"Error saving UserInfo: {ex.Message}");
                 throw;
             }
+
         }
 
         public int UpdateUserProfile(UserProfile userProfile)
         {
             try
             {
-                var imageFileName = $"{Guid.NewGuid()}_profile.jpg";
-                var imagePathOnDisk = Path.Combine("wwwroot", "ProfileImages", imageFileName);
+                var fileName = "";
+                if (userProfile.File != null)
+                {
 
-                File.WriteAllBytes(imagePathOnDisk, userProfile.Image);
+                    fileName = $"{Guid.NewGuid()}_profile{Path.GetExtension(userProfile.FileName)}";
 
-                userProfile.ProfilePicturePath = $"/ProfileImages/{imageFileName}";
+                    var uniqueFolder = userProfile.FirstName + "_" + userProfile.LastName;
+                    var uniqueUserFolder = Path.Combine("wwwroot", "ProfileFiles", uniqueFolder);
 
-                int userId = _usersDL.UpdateUserProfile(userProfile);
+                    // Check if the user's folder exists, and create it if not
+                    if (!Directory.Exists(uniqueUserFolder))
+                    {
+                        Directory.CreateDirectory(uniqueUserFolder);
+                    }
 
-                return userId;
+                    var filePathOnDisk = Path.Combine(uniqueUserFolder, fileName);
+
+                    File.WriteAllBytes(filePathOnDisk, userProfile.File);
+
+                    userProfile.ProfilePicturePath = $"/ProfileFiles/{uniqueFolder}/{fileName}";
+
+                    int userId = _usersDL.UpdateUserProfile(userProfile);
+
+                    return userId;
+                }
+                else
+                {
+
+                    throw new ArgumentNullException("userProfile.File", "No file provided for update.");
+                }
+               
             }
             catch (Exception ex)
             {

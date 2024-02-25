@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Assignment\\Arkenea\\BAL\\BAL.csproj": {}
+    "D:\\Arkenea\\BAL\\BAL.csproj": {}
   },
   "projects": {
-    "D:\\Assignment\\Arkenea\\BAL\\BAL.csproj": {
+    "D:\\Arkenea\\BAL\\BAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Assignment\\Arkenea\\BAL\\BAL.csproj",
+        "projectUniqueName": "D:\\Arkenea\\BAL\\BAL.csproj",
         "projectName": "BAL",
-        "projectPath": "D:\\Assignment\\Arkenea\\BAL\\BAL.csproj",
-        "packagesPath": "C:\\Users\\subhash.sah\\.nuget\\packages\\",
-        "outputPath": "D:\\Assignment\\Arkenea\\BAL\\obj\\",
+        "projectPath": "D:\\Arkenea\\BAL\\BAL.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "D:\\Arkenea\\BAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\subhash.sah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\Assignment\\Arkenea\\DAL\\DAL.csproj": {
-                "projectPath": "D:\\Assignment\\Arkenea\\DAL\\DAL.csproj"
+              "D:\\Arkenea\\DAL\\DAL.csproj": {
+                "projectPath": "D:\\Arkenea\\DAL\\DAL.csproj"
               }
             }
           }
@@ -63,17 +63,17 @@
         }
       }
     },
-    "D:\\Assignment\\Arkenea\\DAL\\DAL.csproj": {
+    "D:\\Arkenea\\DAL\\DAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Assignment\\Arkenea\\DAL\\DAL.csproj",
+        "projectUniqueName": "D:\\Arkenea\\DAL\\DAL.csproj",
         "projectName": "DAL",
-        "projectPath": "D:\\Assignment\\Arkenea\\DAL\\DAL.csproj",
-        "packagesPath": "C:\\Users\\subhash.sah\\.nuget\\packages\\",
-        "outputPath": "D:\\Assignment\\Arkenea\\DAL\\obj\\",
+        "projectPath": "D:\\Arkenea\\DAL\\DAL.csproj",
+        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
+        "outputPath": "D:\\Arkenea\\DAL\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\subhash.sah\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [

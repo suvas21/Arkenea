@@ -20,7 +20,8 @@ namespace DAL.Models
         public string Email { get; set; }
         public string Address { get; set; }
         public string Phone { get; set; }
-        public byte[] Image { get; set; }
+        public byte[] File { get; set; }
+        public string FileName { get; set; }
         public int UserId { get; set; }
         public string ProfilePicturePath { get; set; }
         public int RoleId { get; set; }

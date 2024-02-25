@@ -32,18 +32,18 @@ namespace Arkenea.Controllers
 
         //[Authorize(Roles = "Admin")]
         [HttpPost]
-        public async Task<IActionResult> CreateUser(UserProfile userProfile, IFormFile profilePicture)
+        public async Task<IActionResult> CreateUser(UserProfile userProfile, IFormFile profileFile)
         {
             try
             {
 
-                if (profilePicture != null && profilePicture.Length > 0)
+                if (profileFile != null && profileFile.Length > 0)
                 {
               
                     using (var stream = new MemoryStream())
                     {
-                        await profilePicture.CopyToAsync(stream);
-                        userProfile.Image = stream.ToArray();
+                        await profileFile.CopyToAsync(stream);
+                        userProfile.File = stream.ToArray();
                     }
                 }
 
@@ -85,7 +85,7 @@ namespace Arkenea.Controllers
 
         //[Authorize(Roles = "Admin")]
         [HttpPost]
-        public async Task<IActionResult> UpdateUser(UserProfile userProfile, IFormFile profilePicture)
+        public async Task<IActionResult> UpdateUser(UserProfile userProfile, IFormFile profileFile)
         {
             try
             {
@@ -98,13 +98,14 @@ namespace Arkenea.Controllers
                 }
 
 
-                if (profilePicture != null && profilePicture.Length > 0)
+                if (profileFile != null && profileFile.Length > 0)
                 {
- 
+
+                    userProfile.FileName = profileFile.FileName;
                     using (var stream = new MemoryStream())
                     {
-                        await profilePicture.CopyToAsync(stream);
-                        userProfile.Image = stream.ToArray();
+                        await profileFile.CopyToAsync(stream);
+                        userProfile.File = stream.ToArray();
                     }
                 }
 
